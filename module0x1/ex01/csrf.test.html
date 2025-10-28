@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Test CSRF Interactif</title>
+</head>
+<body>
+<h2>Test CSRF / Transfer Interactif</h2>
+
+<p>Entrez le montant que vous voulez tester :</p>
+
+<form id="csrfForm">
+  <label for="amount">Montant :</label>
+  <input type="number" id="amount" name="amount" value="50" min="1"/>
+  <input type="submit" value="Envoyer POST"/>
+</form>
+
+<h3>Résultat :</h3>
+<pre id="result"></pre>
+
+<script>
+document.getElementById('csrfForm').addEventListener('submit', async function(e) {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const amount = document.getElementById('amount').value;
+
+    try {
+        const response = await fetch('http://localhost:8080/transfer', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ amount })
+        });
+
+        const data = await response.json();
+        document.getElementById('result').textContent = JSON.stringify(data, null, 2);
+    } catch (err) {
+        document.getElementById('result').textContent = 'Erreur: ' + err.message;
+    }
+});
+</script>
+</body>
+</html> 
