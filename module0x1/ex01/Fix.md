@@ -1,4 +1,4 @@
-Token-Based Mitigation¶ that's what we will use to fix that breach.
+We will use Token-Based Mitigation to fix that breach.
 
 The synchronizer token pattern is one of the most popular and recommended methods to mitigate CSRF.
 
