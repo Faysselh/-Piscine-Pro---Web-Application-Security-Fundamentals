@@ -1,7 +1,7 @@
-1.We can encode the cookie.
+1. We can encode the cookie.
 So even if we have access to it we will be not able to use it or read it.
 
-2.Simply not using HTML in our JS with calling innerHTML for example so if we want to write some stuff just use text.Content or innerText. Because InnerHTML it's an javascript propriety that allows to read or modify a content of HTML element in a web page.
+2. Simply not using HTML in our JS with calling innerHTML for example so if we want to write some stuff just use text.Content or innerText. Because InnerHTML it's an javascript propriety that allows to read or modify a content of HTML element in a web page.
 
 For example:
 Replace that, 
