@@ -4,9 +4,14 @@ So even if we have access to it we will be not able to use it or read it.
 2.Simply not using HTML in our JS with calling innerHTML for example so if we want to write some stuff just use text.Content or innerText. Because InnerHTML it's an javascript propriety that allows to read or modify a content of HTML element in a web page.
 
 For example:
-Replace that, document.getElementById("output").innerHTML = "<b>" + userInput + "</b>";
+Replace that, 
+```
+document.getElementById("output").innerHTML = "<b>" + userInput + "</b>";
+```
 by that
-(document.getElementById("message").textContent = userInput).
+```
+document.getElementById("message").textContent = userInput;
+```
 
 We should not create a variable named script because it's an easy way for an attacker to exploit us and it opens many doors.By executing user input directly as JavaScript code, a user can send us anything they want.
 
