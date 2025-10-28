@@ -1,4 +1,4 @@
-#Few way to fix that breach.
+# Few way to fix that breach
 
 1. We can encode the cookie.
 So even if we have access to it we will be not able to use it or read it.
