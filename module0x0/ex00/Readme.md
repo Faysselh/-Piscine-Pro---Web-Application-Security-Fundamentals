@@ -1,4 +1,5 @@
-In this module, we will briefly introduce the concept of XSS attacks. What is Cross-Site Scripting?
+# **In this module, we will briefly introduce the concept of XSS attacks.**
+**What is Cross-Site Scripting?**
 
 Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code.
 
