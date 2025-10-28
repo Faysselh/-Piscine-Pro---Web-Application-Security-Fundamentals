@@ -5,7 +5,7 @@
 <input type="number" name="amount" value="100"/>
 <input type="submit" value="Transfer Money"/>
 ```
-### Second Method with an interface more developped ! and the content-type but not really needed because in that case we have, 1. Error: NetworkError when attempting to fetch resource. and 2. Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:8080/transfer. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 200.
+### Second Method with an interface more developped ! and the content-type but not really needed.
 
 ```
 <!DOCTYPE html>
