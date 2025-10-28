@@ -1,11 +1,11 @@
 # **In this module, we will briefly introduce the concept of XSS attacks.**
 **What is Cross-Site Scripting?**
 
-Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code.
+## Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code.
 
 An attacker can use XSS to send a malicious script to an unsuspecting user. The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page.
 
-We cand find 3 type of XSS vulnerabilities.
+We cand find 3 type of XSS vulnerabilities. ##
 
 1.Reflected XSS (AKA Non-Persistent or Type I)
 
