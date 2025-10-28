@@ -16,7 +16,7 @@ app.use(cookieParser());
 const csrfMiddleware = csurf({ cookie: true, value: req => req.body.tokenCSRF});
 
 ### Serve index.html with CSRF token
-app.get('/', csrfMiddleware, (req, res) => {
+``` app.get('/', csrfMiddleware, (req, res) => {
     let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
     html = html.replace('{{CSRF_TOKEN}}', req.csrfToken());
     res.send(html);
@@ -24,8 +24,8 @@ app.get('/', csrfMiddleware, (req, res) => {
 
 app.post('/transfer', csrfMiddleware, (req, res) => {
     ...
-}
-
+} 
+```
 ### After we will add this to our index.html
 
  <input type="hidden" name="tokenCSRF" value="{{CSRF_TOKEN}}">
